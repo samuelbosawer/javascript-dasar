@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipe Data Object</title>
+</head>
+<body>
+    
+    <script>
+        const person = {
+            "Nama Lengkap" : "Samuel Bosawer",
+            Alamat : "Kotaraja",
+            umur : 12
+        };
+
+        // ubah property / attribute
+        // person["nama"] = "Eko Kurniawan"
+        // person["alamat"] ="Papua"
+        // person["umur"] = 23
+
+        // Mengakses Property Object
+        console.info(`Nama : ${person['Nama Lengkap']}`)
+        console.info(`Nama : ${person.Alamat}`)
+        console.info(`Nama : ${person.Umur}`)
+        
+        console.table(person)
+
+        delete person["umur"]
+        console.table(person)
+
+
+
+        
+
+    </script>
+</body>
+</html>
