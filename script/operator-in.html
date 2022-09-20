@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator In</title>
+</head>
+<body>
+    <!-- Operator In 
+    Digunakan hanya untuk mengercek property bukan value
+    -->
+    <script>
+        const person = {
+            firstName : "Samuel",
+            lastName : "Bosawer"
+        };
+
+        if("firstName" in person)
+        {
+            alert(`Hello ${person.firstName}`);
+        }else{
+            alert (`Helo`);
+        }
+
+        const student = {
+            firstName : "Samuel",
+            middleName : undefined,
+            lastName  : 'Bosawer'
+        }
+
+        if("middleName" in student)
+        {
+            alert(`Hello ${student.middleName}`)
+        }else{
+            alert(`Hello Student`)
+        }
+
+        const name = [null, "sam", null];
+        const result = 4 in name;
+        document.writeln(`<p> ${result} </p>`)
+    </script>
+</body>
+</html>
