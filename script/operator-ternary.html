@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Ternary</title>
+</head>
+<body>
+    <!-- Operator Ternary hanya terdiri dari dua kondisi yaitu true dan false. jika true maka pesan pertama yang akan di eksekusi dan false maka pesan kedua yang akan dieksekusi  -->
+
+    <script>
+        const nilai = 80;
+        let ucapan;
+
+        // Operator If
+        if(nilai >= 75)
+        {
+            ucapan = "Selamar Anda Lulus";
+        }else{
+            ucapan = "Silahkan coba lagi";
+        }
+        document.writeln(`<p> ${ucapan} </p>`)
+
+        // Operator Ternary
+        ucapan = nilai >= 75 ? "Selamar Anda Lulus" : "Silahkan coba lagi";
+        document.writeln(`<p> ${ucapan} </p>`) ;
+    </script>
+</body>
+</html>
