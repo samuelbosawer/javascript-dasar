@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+<body>
+    <script>
+        function sum(name, ...data)
+        {
+            let total = 0;
+            for (const item of data)
+            {
+                total += item;
+            }
+            console.info(`Total ${name} is ${total}`);
+        }
+        sum('Merah',2,4,3,4,0,4)
+        sum('Putih',2,1,3,4,0,4,10,22)
+        sum('Biru',22,1,3,4,0,4,10,22,1)
+
+        // Spread Syntanx 
+        const value = [10,10,10,10,10];
+        sum("Test", ...value);
+
+        // Argumrnt Objec
+        function oldSum(){
+            console.info(arguments)
+            let total = 0;
+            for(const argument of arguments)
+            {
+                total += argument
+            }
+            document.writeln(`<p> Total is ${total} </p>`)
+        }
+        oldSum(1,2,4,5,1)
+    </script>
+</body>
+</html>
