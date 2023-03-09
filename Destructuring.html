@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    
+    <script>
+        // Cara biasa mengambil data di array
+        // const names = ["Eko","Samuel","Bosawer"];
+        // const firstName = names[0];
+        // const middleName = names[1];
+        // const lastName = names[2];
+
+        // console.info(firstName);
+        // console.info(middleName);
+        // console.info(lastName);
+
+        // Destructuring Array
+    {
+        const names = ["Sam","Maikel","Janzen","Jekson","acho"];
+            let [firstName,middleName,lastName, ...other] = names;
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+            console.info(other);
+    }
+
+
+    {
+
+                // Cara biasa mengambil data di object  
+                const person = {
+            firstName: "Eko",
+            lastName: "Khannedy",
+            address:{
+                street: "Jalan Belum ada",
+                city: "Jakarta",
+                country: "Indonesia"
+            },
+            hobby: "Game",
+            channel: "SBOS LAB"
+        };
+
+        const {firstName, lastName, address :{country, city,street}, ... others} = person;
+        console.info(firstName);
+        console.info(lastName);
+        console.info(country);
+        console.info(city);
+        console.info(street);
+        console.info(others);
+
+    }
+
+
+    {
+        function displayPerson({firstName, middleName, lastName})
+        {
+            console.info(firstName);
+            console.info(middleName);
+            console.info(lastName);
+        }
+
+        const person = {
+            firstName: "Eko",
+            middleName: "Kurniawan",
+            lastName: "Samuel"
+        };
+
+        displayPerson(person);
+    }
+
+    {
+        function sum([satu,dua])
+        {
+            return satu + dua;
+        };
+
+        console.info(sum([10,20]));
+        console.info(sum([10,10]));
+    }
+
+    {
+        const name = ["Samuel","Bosawer","Jago Coding","YOI"];
+        const [firstName, middleName, lastName, nama = "Bos"] = name;
+
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+        console.info(nama);
+    }
+    {
+
+// Cara biasa mengambil data di object  
+    const person =
+    {
+        firstName: "Eko",
+        middleName: 'Sam',
+        lastName: "Khannedy"
+        };
+
+        const {firstName, lastName, middleName = "Septer"} = person;
+        console.info(firstName);
+        console.info(middleName);
+        console.info(lastName);
+
+        {
+            let { firstName: namaDepan, middleName: namaTengah = "Bosawer",lastName: namaBelakang} = person;
+            console.info(namaDepan);
+            console.info(namaTengah);
+            console.info(namaBelakang);
+        }   
+      
+    }
+  
+
+    </script>
+</body>
+</html>
